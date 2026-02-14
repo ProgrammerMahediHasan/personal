@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #3b82f6; /* Default blue, will adjust later */
+  --color-dark: #0f172a;
+  --color-dark-lighter: #1e293b;
+}
+
+:root {
+  --primary-color: #3b82f6;
+  --bg-dark: #0f172a;
+  --bg-dark-lighter: #1e293b;
+  --text-light: #f8fafc;
+  --text-dim: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#0f172a] text-[#f8fafc] font-sans antialiased;
+  margin: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#0f172a];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#3b82f6] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#2563eb];
+}
+
+/* AOS overrides for smoother entry */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
