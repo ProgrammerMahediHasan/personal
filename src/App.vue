@@ -1,15 +1,20 @@
 <template>
-  <div class="bg-[#0f172a] text-[#f8fafc] selection:bg-blue-600/30">
+  <div
+    :class="[
+      isDark ? 'bg-[#0f172a] text-[#f8fafc]' : 'bg-[#f9fafb] text-[#020617]',
+      'min-h-screen selection:bg-blue-600/30'
+    ]"
+  >
     <PageLoader :is-loading="isLoading" />
-    
+
     <Navbar :is-dark="isDark" @toggle-dark="toggleDark" />
-    
+
     <main>
-      <Hero />
+      <Hero :is-dark="isDark" />
       <About />
       <Skills />
       <Services />
-      <Portfolio />
+      <Portfolio :is-dark="isDark" />
       <Experience />
       <Testimonials />
       <Contact />
@@ -20,7 +25,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import PageLoader from './components/layout/PageLoader.vue'
 import Navbar from './components/layout/Navbar.vue'
 import Footer from './components/layout/Footer.vue'
@@ -36,16 +41,35 @@ import Contact from './components/sections/Contact.vue'
 const isLoading = ref(true)
 const isDark = ref(true)
 
+const applyTheme = () => {
+  const root = document.documentElement
+  if (isDark.value) {
+    root.classList.remove('theme-light')
+    localStorage.setItem('theme', 'dark')
+  } else {
+    root.classList.add('theme-light')
+    localStorage.setItem('theme', 'light')
+  }
+}
+
 const toggleDark = () => {
   isDark.value = !isDark.value
-  // In a real app, you'd handle document classes here
 }
 
 onMounted(() => {
-  // Simulate loading time
+  const saved = localStorage.getItem('theme')
+  if (saved === 'light') {
+    isDark.value = false
+  }
+  applyTheme()
+
   setTimeout(() => {
     isLoading.value = false
   }, 1500)
+})
+
+watch(isDark, () => {
+  applyTheme()
 })
 </script>
 

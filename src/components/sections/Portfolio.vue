@@ -2,7 +2,7 @@
   <section id="portfolio" class="py-24 bg-[#1e293b]/50">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl font-bold text-white mb-4">Portfolio</h2>
+        <h2 class="text-4xl font-bold text-black mb-4">My Projects</h2>
         <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
       </div>
 
@@ -15,8 +15,8 @@
           :class="[
             'px-6 py-2 rounded-full font-medium transition-all duration-300',
             activeTab === tab 
-              ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' 
-              : 'text-gray-400 hover:text-white border border-gray-800 hover:border-blue-500/50'
+              ? 'bg-blue-600 text-black shadow-lg shadow-blue-600/20' 
+              : 'text-black hover:text-black border border-gray-800 hover:border-blue-500/50'
           ]"
         >
           {{ tab }}
@@ -37,15 +37,15 @@
             <img 
               :src="project.image" 
               :alt="project.title" 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
           </div>
 
           <!-- Overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
             <span class="text-blue-500 text-sm font-medium mb-2 uppercase tracking-widest">{{ project.category }}</span>
-            <h3 class="text-2xl font-bold text-white mb-3">{{ project.title }}</h3>
-            <p class="text-gray-300 text-sm mb-6 line-clamp-2">{{ project.description }}</p>
+            <h3 class="text-2xl font-bold text-black mb-3">{{ project.title }}</h3>
+            <p class="text-black text-sm mb-6 line-clamp-2">{{ project.description }}</p>
             
             <div class="flex space-x-4">
               <a :href="project.liveLink" class="p-3 bg-blue-600 rounded-full text-white hover:bg-blue-700 transition-colors shadow-lg">
@@ -66,7 +66,7 @@
 import { ref, computed } from 'vue'
 import { ExternalLink, Github } from 'lucide-vue-next'
 
-const tabs = ['All', 'Web Apps', 'UI Design', 'Full Stack']
+const tabs = ['All', 'Frontend-Project', 'Backend-Project', 'Landing Page-Project']
 const activeTab = ref('All')
 
 const projects = [

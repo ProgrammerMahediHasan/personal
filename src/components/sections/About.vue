@@ -10,9 +10,9 @@
         <div class="relative group" data-aos="fade-right">
           <div class="absolute -inset-4 bg-blue-600/20 rounded-2xl blur-xl group-hover:bg-blue-600/30 transition-all duration-500"></div>
           <img 
-            src="https://picsum.photos/seed/about/600/600" 
-            alt="About Image" 
-            class="relative rounded-2xl shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-700 w-full"
+            src="/src/assets/images/About.png" 
+            alt="About Mahedi Hasan" 
+            class="relative rounded-2xl shadow-2xl transition-all duration-700 w-full"
           />
           <div class="absolute bottom-6 right-6 bg-blue-600 px-6 py-4 rounded-xl shadow-xl">
             <p class="text-3xl font-bold text-white">5+</p>
@@ -21,7 +21,7 @@
         </div>
 
         <div data-aos="fade-left">
-          <h3 class="text-2xl font-bold text-white mb-6">Hello! I'm Mahedi Hasan Abir</h3>
+          <h3 class="text-2xl font-bold text-white mb-6">Hello! I'm Mahedi Hasan</h3>
           <p class="text-gray-400 text-lg mb-8 leading-relaxed">
             A passionate Full Stack Web Developer based in Bangladesh. I specialize in building high-quality websites and applications that are both beautiful and functional. My goal is to always provide my clients with the best possible service and to help them achieve their business goals.
           </p>
@@ -46,11 +46,11 @@
 
 <script setup>
 const personalInfo = [
-  { label: 'Name', value: 'Mahedi Hasan Abir' },
-  { label: 'Email', value: 'contact@mahedi.com' },
-  { label: 'Phone', value: '+880 1234 567 890' },
+  { label: 'Name', value: 'Mahedi Hasan' },
+  { label: 'Email', value: 'mahedihasanabir8@gmail.com' },
+  { label: 'Phone', value: '01632606827' },
   { label: 'Experience', value: '5+ Years' },
-  { label: 'Address', value: 'Dhaka, Bangladesh' },
+  { label: 'Address', value: 'Narayanganj, Dhaka' },
   { label: 'Freelance', value: 'Available' }
 ]
 </script>

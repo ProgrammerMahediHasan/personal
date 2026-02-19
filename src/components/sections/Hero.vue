@@ -3,8 +3,11 @@
     <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div data-aos="fade-right">
         <h4 class="text-blue-500 font-medium mb-4 tracking-widest uppercase">Welcome to my portfolio</h4>
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight">
-          Hi, I'm <span class="text-blue-500">Mahedi Hasan Abir</span>
+        <h1
+          class="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+          :class="isDark ? 'text-white' : 'text-black'"
+        >
+          Hello, I'm <span class="text-blue-500">Mahedi Hasan</span>
         </h1>
         <div class="text-2xl md:text-3xl font-medium text-gray-400 mb-8 h-12">
           <span ref="typeTarget"></span>
@@ -17,7 +20,12 @@
           <a href="#contact" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-blue-600/20">
             Hire Me
           </a>
-          <a href="#" class="px-8 py-4 border border-gray-700 hover:border-blue-500 text-white font-semibold rounded-lg transition-all hover:bg-blue-500/10">
+          <a
+            href="/src/assets/CV of Mahedi Hasan (Software Developer).pdf"
+            target="_blank"
+            class="px-8 py-4 border border-gray-700 hover:border-blue-500 font-semibold rounded-lg transition-all hover:bg-blue-500/10"
+            :class="isDark ? 'text-white' : 'text-black'"
+          >
             Download CV
           </a>
         </div>
@@ -37,9 +45,9 @@
           
           <div class="relative w-full h-full rounded-2xl overflow-hidden border-2 border-gray-800 bg-gray-900 shadow-2xl">
             <img 
-              src="https://picsum.photos/seed/mahedi/600/800" 
-              alt="Mahedi Hasan Abir" 
-              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              src="/src/assets/images/Mahedi.png" 
+              alt="Mahedi Hasan" 
+              class="w-full h-full object-cover transition-all duration-700"
             />
           </div>
         </div>
@@ -52,6 +60,10 @@
 import { onMounted, ref } from 'vue'
 import Typed from 'typed.js'
 import { Linkedin, Github, Facebook, Twitter } from 'lucide-vue-next'
+
+const props = defineProps({
+  isDark: Boolean
+})
 
 const typeTarget = ref(null)
 

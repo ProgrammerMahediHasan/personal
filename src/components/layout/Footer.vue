@@ -4,7 +4,7 @@
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-8 md:mb-0">
           <a href="#" class="text-2xl font-bold text-white tracking-wider">
-            M<span class="text-blue-500">H</span>A
+            Developer <span class="text-blue-500">Mahedi</span>
           </a>
           <p class="text-gray-500 mt-4 max-w-xs">
             Building digital products, brands, and experiences with passion and precision.
@@ -18,7 +18,7 @@
         </div>
 
         <div class="text-gray-500 text-sm">
-          &copy; {{ new Date().getFullYear() }} Mahedi Hasan Abir. All rights reserved.
+          &copy; {{ new Date().getFullYear() }} Mahedi Hasan. All rights reserved.
         </div>
       </div>
       

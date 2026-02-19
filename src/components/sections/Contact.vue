@@ -20,7 +20,7 @@
           </div>
 
           <!-- Map Embed -->
-          <div class="rounded-2xl overflow-hidden h-64 border border-gray-800 mt-12 grayscale hover:grayscale-0 transition-all duration-500">
+          <div class="rounded-2xl overflow-hidden h-64 border border-gray-800 mt-12 transition-all duration-500">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233668.3870369269!2d90.27923991057244!3d23.780573258035957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa5690c31864291!2sDhaka!5e0!3m2!1sen!2sbd!4v1625478335431!5m2!1sen!2sbd" 
               width="100%" 
@@ -119,9 +119,9 @@ const isSubmitting = ref(false)
 const submitStatus = ref(null)
 
 const contactInfo = [
-  { icon: Mail, label: 'Email Me', value: 'contact@mahedi.com' },
-  { icon: Phone, label: 'Call Me', value: '+880 1234 567 890' },
-  { icon: MapPin, label: 'Location', value: 'Dhaka, Bangladesh' }
+  { icon: Mail, label: 'Email Me', value: 'mahedihasanabir8@gmail.com' },
+  { icon: Phone, label: 'Call Me', value: '01632606827' },
+  { icon: MapPin, label: 'Location', value: 'Narayanganj, Dhaka' }
 ]
 
 const sendEmail = async () => {
